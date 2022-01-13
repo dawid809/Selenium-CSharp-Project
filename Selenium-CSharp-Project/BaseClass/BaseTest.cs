@@ -14,7 +14,7 @@ namespace Selenium_CSharp_Project.BaseClass
    {
         public IWebDriver driver;
 
-        [OneTimeSetUp]
+        [SetUp]
         public void Open()
         {
             driver = new ChromeDriver();
@@ -22,7 +22,7 @@ namespace Selenium_CSharp_Project.BaseClass
             driver.Url = "https://www.facebook.com/";
         }
 
-        [OneTimeTearDown]
+        [TearDown]
         public void Close()
         {
             Thread.Sleep(2000);
