@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseClass\BaseTest.cs" />
     <Compile Include="TestClass.cs" />
   </ItemGroup>
   <ItemGroup>
