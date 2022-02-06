@@ -12,7 +12,7 @@ using OpenQA.Selenium.Support.UI;
 namespace Selenium_CSharp_Project
 {
     [TestFixture]
-    public class TestClass: BaseTest
+    public class TestClass : BaseTest
     {
         [Test, Category("Smoke Testing")]
         public void TestMethod1()
@@ -31,10 +31,11 @@ namespace Selenium_CSharp_Project
             //.//*[@class='_6ltg'][2]
 
             driver.FindElement(By.XPath(".//*[@class='_6ltg'][2]")).Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             IWebElement monthDropdownList = driver.FindElement(By.XPath(".//*[@id='month']"));
             SelectElement element = new SelectElement(monthDropdownList);
+            Thread.Sleep(2000);
             element.SelectByIndex(4);
             Thread.Sleep(1000);
             //Tylko jeśli używamy w języku polskim

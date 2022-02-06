@@ -20,15 +20,15 @@ namespace Selenium_CSharp_Project
         [TestCaseSource("DataDrivenTesting")]
         public void Test1(string urlName)
         {
-            IWebDriver driver =null;
+            IWebDriver driver = null;
             try
             {
                 driver = new ChromeDriver();
                 driver.Manage().Window.Maximize();
                 //driver.Url = "https://www.facebook.com/";
                 driver.Url = urlName;
-                //IWebElement emailTextField = driver.FindElement(By.XPath(".//*[@id='email']"));
-                IWebElement emailTextField = driver.FindElement(By.XPath(".//*[@id='abcd']"));
+                IWebElement emailTextField = driver.FindElement(By.XPath(".//*[@id='email']"));
+                //IWebElement emailTextField = driver.FindElement(By.XPath(".//*[@id='abcd']"));
                 emailTextField.SendKeys("Selenium C#");
                 driver.Quit();
             }
@@ -42,7 +42,7 @@ namespace Selenium_CSharp_Project
             }
             finally
             {
-                if(driver != null)
+                if (driver != null)
                 {
                     driver.Quit();
                 }

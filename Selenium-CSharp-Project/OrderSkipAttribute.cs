@@ -21,8 +21,6 @@ namespace Selenium_CSharp_Project
         [Test, Order(2), Category("OrderSkipAttribute")]
         public void TestMethod1()
         {
-            // Ignore attribute
-            Assert.Ignore("Defect 12345");
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://www.facebook.com/";
             IWebElement emailTextField = driver.FindElement(By.XPath(".//*[@id='email']"));
@@ -43,6 +41,8 @@ namespace Selenium_CSharp_Project
         [Test, Order(0), Category("OrderSkipAttribute")]
         public void TestMethod3()
         {
+            // Ignore attribute
+            Assert.Ignore("IE not supporting site");
             IWebDriver driver = new InternetExplorerDriver();
             driver.Url = "https://www.facebook.com/";
             IWebElement emailTextField = driver.FindElement(By.XPath(".//*[@id='email']"));
